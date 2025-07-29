@@ -3,7 +3,7 @@
  * @returns {number} the length of the array
  */
 function getLength(numbers) {
-  // TODO
+  return numbers.length;
 }
 
 /**
@@ -11,7 +11,11 @@ function getLength(numbers) {
  * @returns {number} the sum of the numbers
  */
 function getSum(numbers) {
-  // TODO
+  let sum = 0;
+  for (let indexStart = 0; indexStart < numbers.length; indexStart++) {
+    sum += numbers[indexStart];
+  }
+  return sum;
 }
 
 /**
@@ -19,7 +23,11 @@ function getSum(numbers) {
  * @returns {number} the mean of the numbers
  */
 function getMean(numbers) {
-  // TODO
+  let sum = 0;
+  for (let indexStart = 0; indexStart < numbers.length; indexStart++) {
+    sum += numbers[indexStart];
+  }
+  return sum / numbers.length;
 }
 
 /**
@@ -27,7 +35,7 @@ function getMean(numbers) {
  * @returns {number} the smallest of the numbers
  */
 function getMin(numbers) {
-  // TODO
+  return Math.min(...numbers);
 }
 
 /**
@@ -35,7 +43,7 @@ function getMin(numbers) {
  * @returns {number} the largest of the numbers
  */
 function getMax(numbers) {
-  // TODO
+  return Math.max(...numbers);
 }
 
 /**
@@ -43,7 +51,7 @@ function getMax(numbers) {
  * @returns {number} the range of the numbers (max - min)
  */
 function getRange(numbers) {
-  // TODO
+  return Math.max(...numbers) - Math.min(...numbers);
 }
 
 /**
@@ -51,7 +59,18 @@ function getRange(numbers) {
  * @returns {number[]} the even numbers in the array
  */
 function getEvens(numbers) {
-  // TODO
+  const evensArray = [];
+  // console.log("Numbers input:", numbers);
+  for (let indexStart = 0; indexStart < numbers.length; indexStart++) {
+    const element = numbers[indexStart];
+    // console.log("current index location:", indexStart);
+    // console.log("current value at index:", element);
+    if (element % 2 === 0) {
+      evensArray.push(element);
+      // console.log("if even we add it here:", evensArray);
+    }
+  }
+  return evensArray;
 }
 
 /**
@@ -59,7 +78,18 @@ function getEvens(numbers) {
  * @returns {number[]} the odd numbers in the array
  */
 function getOdds(numbers) {
-  // TODO
+  const oddsArray = [];
+  // console.log("Numbers input:", numbers);
+  for (let indexStart = 0; indexStart < numbers.length; indexStart++) {
+    const element = numbers[indexStart];
+    // console.log("current index location:", indexStart);
+    // console.log("current value at index:", element);
+    if (element % 2 === 1) {
+      oddsArray.push(element);
+      // console.log("if even we add it here:", oddsArray);
+    }
+  }
+  return oddsArray;
 }
 
 // === READ BUT DO NOT EDIT THE CODE BELOW ===
